@@ -1,0 +1,18 @@
+quarkus:
+  http:
+    port: 8080
+  hibernate-orm:
+    database:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    db-kind: postgresql
+    username: demo
+    password: demo
+    jdbc:
+      url: jdbc:postgresql://localhost:5433/travel_db
+
+  flyway:
+    locations: db/migration
+    #baseline-version: '0.0.0.0'
+    validate-on-migrate: true
+    enabled: true
